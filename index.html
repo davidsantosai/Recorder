@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title>Water drop Animation - Recorder</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/heroes.css" type="text/css" />
+
+</head>
+
+<body>
+  <main>
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+      <h1 class="display-4 fw-bold">Drop Animation Recorder</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">By starting a new record you will be able to click on the image and effortless save those
+          patterns, then you will be able play each of the recordings.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+          <button id="btnRepeat" type="button" onclick="watereff.startRecording()"
+            class="btn btn-danger btn-lg px-4 me-sm-3">Record</button>
+          <button id="btnClear" type="button" onclick="watereff.stopRecording()"
+            class="btn btn-outline-secondary btn-lg px-4">Stop</button>
+        </div>
+      </div>
+      <div>
+        <div class="container px-5">
+          <canvas id="water">HTML5 compliant browser required</canvas>
+          <div id="switcher">
+            <img onclick='watereff.changePicture(this.src);' src="img/underwater1.jpg" />
+            <img onclick='watereff.changePicture(this.src);' src="img/underwater2.jpg" />
+          </div>
+          <div id="fps"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="my-3 p-3 bg-body rounded shadow-sm">
+      <h6 class="border-bottom pb-2 mb-0">Recordings</h6>
+      <div id="records-container">
+
+      </div>
+    </div>
+
+  </main>
+
+  <script src="js/vector2d.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>
